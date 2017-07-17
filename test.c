@@ -26,8 +26,8 @@ int main()
             54, "\e[1;37m\e[44m",   // Blue Value of first Pixel
             55, "\e[1;37m\e[42m",   // Green Value of first Pixel
             56, "\e[1;37m\e[41m",   // Red Value of first Pixel
-            57, "\e[0;31m"          // Pattern byte
-            );
+            57, "\e[0;31m",         // Pattern byte
+            -1);                    // (no further color changes)
 	printf("\n");	
 	return 0;
 }
