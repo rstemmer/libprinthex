@@ -1,5 +1,11 @@
 # libPrintHex
 
+libprinthex provides a function to print a hex dump with colored sections.
+
+![Example output](screenshot.jpg?raw=true)
+
+**Project State:** Alive and maintained
+
 ## Installation
 
 You should check the `install.sh` script before executing.

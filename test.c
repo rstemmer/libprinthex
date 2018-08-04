@@ -1,5 +1,5 @@
+#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 #include <printhex.h>
 
 int main()
@@ -16,7 +16,7 @@ int main()
              2, "\e[1;36m",         // BMP size
              6, "\e[1;30m",         // reserved section
             10, "\e[1;34m",         // Offset of image data
-            14, "\e[1;36m",         // Infoblock size
+            14, "\e[1;36m",         // Info block size
             18, "\e[1;34m",         // Size of Image in Px
             26, "\e[1;30m",         // Irrelevant for BMP
             28, "\e[1;34m",         // Bits per pixel
@@ -26,9 +26,10 @@ int main()
             54, "\e[1;37m\e[44m",   // Blue Value of first Pixel
             55, "\e[1;37m\e[42m",   // Green Value of first Pixel
             56, "\e[1;37m\e[41m",   // Red Value of first Pixel
-            57, "\e[0;31m",         // Pattern byte
+            57, "\e[0;31m",         // Padding byte
             -1);                    // (no further color changes)
-	printf("\n");	
-	return 0;
+	printf("\n");
+
+	return EXIT_SUCCESS;
 }
 
