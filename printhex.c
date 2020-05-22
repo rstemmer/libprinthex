@@ -73,13 +73,11 @@ int printhex(void* buffer, int size, int bytesperline, ... )
 
             // Print the hex encoded value
             GoToColumn(hex_offset + pos*3);
-            printf(color);
-            printf("%02X ", values[i] & 0xFF);
+            printf("%s%02X ", color, values[i] & 0xFF);
 
             // Print the ASCII encoded value
             GoToColumn(ascii_offset + pos);
-            printf(color);
-            printf("%c", (values[i] >= ' ' && values[i] <= 0x7E) ? values[i] : '.');
+            printf("%s%c", color, (values[i] >= ' ' && values[i] <= 0x7E) ? values[i] : '.');
 
 
             i++;
