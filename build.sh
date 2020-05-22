@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if type "clang" > /dev/null 2>&1 ; then
     CC=clang

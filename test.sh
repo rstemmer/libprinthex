@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-gcc -std=c99 -L. -I. -o phtest test.c -lprinthex && ./phtest
+clang -std=c99 -L. -I. -o phtest test.c -lprinthex && ./phtest
 
