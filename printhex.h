@@ -1,6 +1,6 @@
 /*
  * A library to print a buffer as typical hex-view with highlighted regions on the console screen. 
- * Copyright (C) 2017  Ralf Stemmer <ralf.stemmer@gmx.net>
+ * Copyright (C) 2017-2020  Ralf Stemmer <ralf.stemmer@gmx.net>
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,11 +19,19 @@
 #ifndef PRINTHEX_H
 #define PRINTHEX_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 int printhex(void* buffer, int size, int bytesperline, ... );
 /*
  * This function prints the bytes of a buffer as a typical hex-view to the screen.
  * Further details can be found in the related readme.
  */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 
