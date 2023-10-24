@@ -23,6 +23,18 @@
 #define LIBPRINTHEX_TEXTCOLOR   "\e[1;34m"
 #define LIBPRINTHEX_FRAMECOLOR  "\e[0;31m"
 
+/*
+ * Because of issue #4: https://github.com/rstemmer/libprinthex/issues/4
+ * the ANSI escape sequences for saving and restoring the cursor posion
+ * has been changed from "\e[s" to "\e7" and "\e[u" to "\e8".
+ *
+ * Following stackoverflow (must be true when written on stackoverflow 🙄)
+ * ESC 7/8 is more reliable than CSI s/u.
+ * https://stackoverflow.com/questions/28986776/ansi-escape-sequence-save-restore-cursor-position-support
+ */
+#define LIBPRINTHEX_SAVECURSORPOS       "\e7"
+#define LIBPRINTHEX_RESTORECURSORPOS    "\e8"
+
 static inline void SaveCursorPosition();
 static inline void GoToColumn(int column);
 
@@ -96,12 +108,12 @@ end:
 
 static inline void SaveCursorPosition()
 {
-    printf("\e[s");
+    printf(LIBPRINTHEX_SAVECURSORPOS);
 }
 
 static inline void GoToColumn(int column)
 {
-    printf("\e[u\e[%iC", column);
+    printf("%s\e[%iC", LIBPRINTHEX_RESTORECURSORPOS, column);
 }
 
 // vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
