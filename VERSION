@@ -1,4 +1,1 @@
-1.0.2 - Using ESC 7/8 instead of CSI s/u for managing cursor positions (fixes #4)
-      - Build script ported to MacOS by Slava Baryshnikov <slava-bz@amlora.com>
-1.0.1
-
+1.0.2

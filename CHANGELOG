@@ -1,3 +1,5 @@
+1.0.2 - 24.10.2023: Using ESC 7/8 instead of CSI s/u for managing cursor positions (fixes #4)
+                    Build script ported to MacOS by Slava Baryshnikov <slava-bz@amlora.com>
 1.0.1 - 03.08.2020: Can now be used inside C++ code without manually creating extern "C" block.
 1.0.0 - 22.05.2020: Compiles without warnings with clang.
 
