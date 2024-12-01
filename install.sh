@@ -1,10 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 PREFIX=/usr/local
-if [ "$(uname)" == "Darwin" ]; then
-install -m 644 -v libprinthex.a $PREFIX/lib
-install -m 644 -v printhex.h    $PREFIX/include
+mkdir -p $PREFIX/lib
+mkdir -p $PREFIX/include
+
+if [ "$(uname)" = "Darwin" ]; then
+install -m 644 -v libprinthex.a $PREFIX/lib/
+install -m 644 -v printhex.h    $PREFIX/include/
 else
-install -m 644 -v -g root -o root libprinthex.a $PREFIX/lib
-install -m 644 -v -g root -o root printhex.h    $PREFIX/include
+install -m 644 -v -o root libprinthex.a $PREFIX/lib/
+install -m 644 -v -o root printhex.h    $PREFIX/include/
 fi
