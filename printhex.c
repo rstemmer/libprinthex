@@ -48,10 +48,6 @@ int printhex(void* buffer, int size, int bytesperline, ... )
                      + hex_offset \
                      + 3; /*" | "*/
 
-    // Text column position for the hex column and the ascii column
-    int hex_col = 0;
-    int asc_col = ascii_offset;
-
     // Setup the list of color configurations
     va_list cfg;
     va_start(cfg, bytesperline);
