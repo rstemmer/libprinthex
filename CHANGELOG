@@ -1,3 +1,5 @@
+1.0.3 - 01.12.2024: Scripts are now POSIX-compliant. Fix install for BSD and Gentoo by tr0pe <holahell90@gmail.com>
+                    Unused variables removed.
 1.0.2 - 24.10.2023: Using ESC 7/8 instead of CSI s/u for managing cursor positions (fixes #4)
                     Build script ported to MacOS by Slava Baryshnikov <slava-bz@amlora.com>
 1.0.1 - 03.08.2020: Can now be used inside C++ code without manually creating extern "C" block.
